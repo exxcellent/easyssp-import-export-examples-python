@@ -1,0 +1,5 @@
+.idea/
+venv/
+/dist/
+/output/ssp_output.ssp
+/output/ssd_output.ssp
