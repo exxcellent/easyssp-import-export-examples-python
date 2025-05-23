@@ -21,7 +21,10 @@ you're testing the API or building production workflows, these scripts will help
 
 ```bash
 easyssp-import-export-examples-python/
-├── demo.py                    # Run a basic scenario
+├── demo_config.py             # User agent and easySSP username and password config.
+├── ssd_import_demo.py         # Run a .ssd file import demo.
+├── ssp_export_demo.py         # Run a .ssp file export demo.
+├── ssp_import_demo.py         # Run a .ssp file import demo.
 ├── input/
 │   └── ssd_example.ssd        # SSD file for importing
 │   └── ssp_example.ssp        # SSP file for importing
@@ -67,8 +70,7 @@ uv sync
 
 ## 3. Provide your login credentials
 
-In the `demo.py` file, replace `your_easyssp_username` and `your_easyssp_password` with your real easySSP credentials
-to start the demo.
+In the `demo_config.py` file, provide your easySSP credentials to start the demo.
 
 ---
 
@@ -92,17 +94,19 @@ This separation of input and output ensures clarity, reproducibility, and easy c
 
 ---
 
-#### 🧪 `demo.py`
+#### 🧪 Demo
 
-The `demo.py` script in the `demo` directory acts as a **central demo runner** and contains example requests that show
+The `ssd_import_demo.py`, `ssp_export_demo.py`, and `ssp_import_demo.py` scripts in the `demo` directory act as **central demo runners** and contain example requests that show
 how to use the client.
-It's a great starting point if you're exploring the API for the first time or want to see full workflows in action.
-To start the demo, run
+They're a great starting point if you're exploring the API for the first time or want to see full workflows in action.
+To start a demo, run
 
 ```bash
 cd demo
-python -m demo
+python -m demo_file
 ```
+
+Replace `demo_file` with one of the following: `ssd_import_demo`, `ssp_export_demo` or `ssp_import_demo`.
 
 ## 📚 Related Projects
 
